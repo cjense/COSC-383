@@ -10,6 +10,7 @@ if __name__ == "__main__":
     for r in range(height):
         for c in range(width):
             if count < 32:
+                # change hard-coded 1 to be variable to extract multiple bits if needed
                chars.append(str(img[r,c,0] & 1))
                chars.append(str(img[r,c,1] & 1))
                chars.append(str(img[r,c,2] & 1))

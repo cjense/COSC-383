@@ -1,0 +1,4 @@
+*********************** EDGE CASES ***********************
+- no header??
+- both image and text in a file
+- multiple images
