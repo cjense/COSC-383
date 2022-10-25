@@ -1,3 +1,7 @@
+import imageio as iio
+import numpy as np
+from PIL import Image as im
+
 def get_bits(img, bitmask=1):
     """Given an iio image object and a bitmask to select bits from each pixel channel, return a bitstring of the selected bits"""
     height, width, _ = img.shape
@@ -27,3 +31,20 @@ def big_endian(bitstring):
     converted = ''.join(bytes)
     print(converted)
     return int(converted, 2)
+
+
+def magnify_lsb(img):
+    height, width, _ = img.shape
+    array = np.zeros((height, width, 3), np.uint8)
+    for r in range(height):
+        for c in range(width):
+            for x in range(3):
+                array[r, c, x] = 0 if (img[r, c, x] << 7) == 0 else 255
+    img = im.fromarray(array, mode='RGB')
+    img.show()
+    return img
+
+
+def test_magnify():
+    img = iio.imread('hide_image.png')
+    magnify_lsb(img)
