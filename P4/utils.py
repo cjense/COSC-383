@@ -34,17 +34,15 @@ def big_endian(bitstring):
 
 
 def magnify_lsb(img):
+    """Magnify the least significant bit in each pixel channel to be either 0 or 255"""
+    # Initialize an array the size of the original image
     height, width, _ = img.shape
     array = np.zeros((height, width, 3), np.uint8)
+    # For each row, column, channel, magnify the least significant bit
     for r in range(height):
         for c in range(width):
             for x in range(3):
-                array[r, c, x] = 0 if (img[r, c, x] << 7) == 0 else 255
+                array[r, c, x] = 0 if (img[r, c, x] << 7) & 255 == 0 else 255
+    # Read the array as a PIL Image and return it
     img = im.fromarray(array, mode='RGB')
-    img.show()
     return img
-
-
-def test_magnify():
-    img = iio.imread('hide_image.png')
-    magnify_lsb(img)
