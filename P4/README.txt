@@ -6,6 +6,6 @@ Files:
 - decode_text.py: Code for reading encoded text
 
 To run:
-1. Install requirements (`pip install requirements.txt`)
+1. Install requirements (`pip install -r requirements.txt`)
 2. To decode an image: `python3 decode_image.py <IMAGE_FILENAME>`
 3. To decode text: `python3 decode_text.py <IMAGE_FILENAME>`
