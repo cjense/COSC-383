@@ -6,18 +6,16 @@ from PIL import Image as im
 
 import utils
 
-'''Don't think we need this for now, it's just getting the dimensions of the original image, not
-necessarily the hidden one'''
-# function to extract 64-bit header, height, and width
-def get_hw(img):
-    height, width, _ = img.shape
-    print("Height:", height, "Width:", width)
-    return [height, width]
-
-
 def bits_to_img(bits, height, width):
-    """Given a bitstring and dimensions for a desired image, read the bits as the channel
-    values for a PIL Image object"""
+    """Given a bitstring and dimensions for a desired image, read the bits as
+    the channel values for a PIL Image object
+    
+    @param bits: a bitstring expected to have at least 8*height*width*3 bits,
+        representing the values for the image in left-to-right, top-to-bottom,
+        RGB order
+    @param height: height of the desired image
+    @param width: width of the desired image
+    @return: a PIL Image object constructed from the parameters"""
     # Create an array of zeroes in the desired final shape
     array = np.zeros((height, width, 3), np.uint8)
     # Convert bits to bytes
@@ -44,7 +42,7 @@ def decode_img(filename):
     # Load image
     img = iio.imread(filename)
     # Extract least-significant bits as string
-    bits = utils.get_bits(img, 1)
+    bits = utils.get_bits(img, lambda x: x&1)  # lambda gets LSB of x
     # Parse header
     height_bitstring = bits[0:32]
     width_bitstring = bits[32:64]

@@ -4,6 +4,7 @@ Files:
 - utils.py: Shared utility functions across multiple forms of steganography decoding
 - decode_image.py: Code for reading an encoded image
 - decode_text.py: Code for reading encoded text
+- requirements.txt: pip-readable file of required libraries
 
 To run:
 1. Install requirements (`pip install -r requirements.txt`)

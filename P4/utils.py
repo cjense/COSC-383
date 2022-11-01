@@ -1,15 +1,22 @@
-import imageio as iio
 import numpy as np
 from PIL import Image as im
 
-def get_bits(img, bitmask=1):
-    """Given an iio image object and a bitmask to select bits from each pixel channel, return a bitstring of the selected bits"""
+def get_bits(img, func=lambda x: x&1):
+    """Given an image and a function to select bits from each pixel channel,
+    return a bitstring of the selected bits.
+
+    @param img: imageio image object
+    @param func: function that takes a channel value and returns zero or more
+        bits (default returns LSB)
+    @return: string of extracted bits in the image, in left-to-right,
+        top-to-bottom, RGB order
+    """
     height, width, _ = img.shape
     bits = ""
     for r in range(height):
         for c in range(width):
             for x in range(3):
-                bits += str(img[r, c, x] & bitmask)
+                bits += str(func(img[r, c, x]))
     return bits
 
 
@@ -34,7 +41,12 @@ def big_endian(bitstring):
 
 
 def magnify_lsb(img):
-    """Magnify the least significant bit in each pixel channel to be either 0 or 255"""
+    """Magnify the least significant bit in each pixel channel to be either 0 or
+    255
+    
+    @param img: an imageio image
+    @return: a PIL image whose pixel-channel values are the amplified values of
+        the corresponding pixel-channels in the original"""
     # Initialize an array the size of the original image
     height, width, _ = img.shape
     array = np.zeros((height, width, 3), np.uint8)
