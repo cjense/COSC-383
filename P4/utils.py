@@ -1,3 +1,5 @@
+import imageio as iio
+import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image as im
 
@@ -40,7 +42,7 @@ def big_endian(bitstring):
     return int(converted, 2)
 
 
-def magnify_lsb(img):
+def magnify_LSB(img):
     """Magnify the least significant bit in each pixel channel to be either 0 or
     255
     
@@ -58,3 +60,43 @@ def magnify_lsb(img):
     # Read the array as a PIL Image and return it
     img = im.fromarray(array, mode='RGB')
     return img
+
+
+def get_LSB_histogram(img):
+    """Show a histogram of the permutations of LSBs in a 2x2 square for each
+    pixel across an image"""
+    fig, ax = plt.subplots(1, 1)  # Get container for returning plot
+    # 2 values for each LSB ^ 3 channels per pixel ^ 4 pixels per grid = 4096 permutations
+    # Read string of LSBs as binary number 0 <= x < 4096
+    vals = []
+    height, width, _ = img.shape
+    # For each row, column in the image (excluding bottom and right edges due to bounds)
+    for r in range(height-1):
+        for c in range(width-1):
+            # Read the LSBs in the 2x2 grid
+            val = ''
+            for dy in [0, 1]:
+                for dx in [0, 1]:
+                    for x in range(3):
+                        val += str(img[r+dy, c+dx, x] & 1)
+            vals.append(int(val, 2))
+    ax.hist(vals, bins=4096)
+    return fig
+
+
+def save(img, filename):
+    """Utility to abstract saving any of the various types of images/graphics
+    used in this codebase"""
+    # Import types here to keep top of file cleaner
+    from imageio.core.util import Array as iio_img
+    from matplotlib.figure import Figure as plt_fig
+    from PIL.Image import Image as PIL_img
+
+    if type(img) == iio_img:
+        iio.imwrite(filename, img)
+    elif type(img) == plt_fig:
+        img.savefig(filename)
+    elif type(img) == PIL_img:
+        img.save(filename)
+    else:
+        raise TypeError("Unrecognized image type")
