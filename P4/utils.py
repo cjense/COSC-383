@@ -58,8 +58,8 @@ def magnify_LSB(img):
             for x in range(3):
                 array[r, c, x] = 0 if (img[r, c, x] << 7) & 255 == 0 else 255
     # Read the array as a PIL Image and return it
-    img = im.fromarray(array, mode='RGB')
-    return img
+    magnified = im.fromarray(array, mode='RGB')
+    return magnified
 
 
 def get_LSB_histogram(img):

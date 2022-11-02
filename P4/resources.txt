@@ -1,0 +1,8 @@
+Resources used:
+ImageIO docs: https://imageio.readthedocs.io/en/stable/user_guide/index.html
+Numpy array to image: https://www.codespeedy.com/convert-a-numpy-array-to-image-in-python/
+Bitstring to int: https://favtutor.com/blogs/binary-string-to-int-python
+Int to char: https://www.knowprogram.com/python/convert-ascii-to-char-python/
+Python bitshifting is annoying: https://stackoverflow.com/questions/64963170/how-to-do-arithmetic-right-shift-in-python-for-signed-and-unsigned-values
+Passing a function as an argument: https://www.geeksforgeeks.org/passing-function-as-an-argument-in-python/
+Matplotlib documentation (histogram and related graphics): https://matplotlib.org/stable/index.html
