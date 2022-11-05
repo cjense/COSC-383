@@ -38,5 +38,5 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         target = sys.argv[1]
     else:
-        target = 'hide_text.png'
+        target = 'PNGs/KAndR.png'
     decode_txt(target)
