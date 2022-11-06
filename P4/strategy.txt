@@ -12,12 +12,15 @@ Height: 59, width: 1769235826
 
 #################### BulbyTheBulby ####################
 Height: 0, width: 0
+Has 4 channels
 
 #################### Castle ####################
 
 #################### Chio1 ####################
+Histogram indicates that there's something hidden
 
 #################### Chio2 ####################
+Magnified image indicates that there's something hidden, possibly top to bottom instead of L to R
 
 #################### Drone_Footage_Frame001 ####################
 
@@ -32,10 +35,18 @@ Height: 0, width: 0
 #################### KAndR ####################
 
 #################### Knight_Small ####################
+Has 4 channels
 
 #################### Knight ####################
+Has 4 channels
 
 #################### Lurking_Color_Balanced ####################
+Ran decode_img on the original image and got a magnified image as the output 
+(decodedImages/Lurking_Color_Balanced_decoded.png). Magnified the magnified image 
+output and got a grainy and oversaturated image of a cat 
+(decodedImages/Lurking_Color_Balanced_decoded_magnified.png), different from the original image.
+
+No text in either decoded or decoded_magnified images.
 
 #################### Lurking ####################
 
