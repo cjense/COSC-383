@@ -50,7 +50,6 @@ def convert_txt(filename, encoding):
     # # Convert bits to string based on encoding
     # decodedmsg = string.decode(encoding)
 
-convert_txt('PNGs/AlbumCover.png', 'utf-8')
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:

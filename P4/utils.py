@@ -2,6 +2,34 @@ import imageio as iio
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image as im
+import itertools as it
+
+def get_bits_iter(img):
+    height, width, _ = img.shape
+    for h in range(height):
+        for w in range(width):
+            for c in range(3):
+                it.product(img[h, w, c])
+    # bits = it.product(range(height), range(width), range(3))
+    # bits = 
+
+    return bits
+
+def getBitsFromSingleChannel(img, channel):
+    """Given an image and a channel, return a bitstring.
+
+    @param img: imageio image object
+    @param channel: channel to extract bits from
+    @return: string of extracted bits in the image, in left-to-right,
+        top-to-bottom order
+    """
+    height, width, _ = img.shape
+    string = []
+    for r in range(height):
+        for c in range(width):
+            string.append(img[r, c, channel]&1)
+
+    return string
 
 def get_bits(img, func=lambda x: x&1):
     """Given an image and a function to select bits from each pixel channel,
