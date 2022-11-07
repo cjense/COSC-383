@@ -1,3 +1,7 @@
+Ran detect_steg on every image, saved magnified images to /magnified directory.
+
+Tried to run decode_img on every image in /PNGs, worked on Castle and Lurking_Color_Balanced.
+
 #################### AlbumCover ####################
 Height: 906718592, width: 1510745688
 

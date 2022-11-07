@@ -33,10 +33,28 @@ def decode_txt(filename):
     string = bits_to_str(bits[32:], num_chars)
     print(string)
 
+def convert_txt(filename, encoding):
+    """Convert an image into a string from a specified encoding"""
+    # Read in the image
+    img = iio.imread(filename)
+    # Extract bitstring
+    bits = utils.get_bits(img, lambda x: x&1)  # lambda gets LSB of x
+
+    bytes = utils.bits_to_bytes(bits)
+    decodedmsg = bytes.decode(encoding)
+    print(decodedmsg)
+
+    # # Read in the text file
+    # with open(filename, 'r') as f:
+    #     string = f.read()
+    # # Convert bits to string based on encoding
+    # decodedmsg = string.decode(encoding)
+
+convert_txt('PNGs/AlbumCover.png', 'utf-8')
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         target = sys.argv[1]
     else:
-        target = 'PNGs/KAndR.png'
+        target = 'sampleImages/hide_text.png'
     decode_txt(target)

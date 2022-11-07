@@ -37,7 +37,7 @@ def img_to_bytes(img):
     return png_encoded
 
 
-def decode_img(filename):
+def decode_img(filename, savename):
     """Read an encoded image from a given image file"""
     # Load image
     img = iio.imread(filename)
@@ -48,15 +48,18 @@ def decode_img(filename):
     width_bitstring = bits[32:64]
     height = int(height_bitstring, 2)
     width = int(width_bitstring, 2)
-    print('Height: {}, width: {}'.format(height, width))
+    print('Height: {}, width: {}'.format(utils.big_endian(height_bitstring), utils.big_endian(width_bitstring)))
     # Get image vals from bits after header
     img = bits_to_img(bits[64:], height, width)
     img.show()
+    utils.save(img, savename)
 
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         target = sys.argv[1]
+        savename = sys.argv[2]
     else:
-        target = 'hide_image.png'
-    decode_img(target)
+        target = 'PNGs/hide_image.png'
+        savename = 'decodedimages/hide_image.png'
+    decode_img(target, savename)

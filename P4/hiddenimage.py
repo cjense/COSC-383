@@ -30,9 +30,6 @@ def get_hw(filename):
     width = int(width_bitstring, 2)
     print('Height: {}, width: {}'.format(height, width))
 
-for file in os.listdir('PNGs'):
-    get_hw('PNGs/' + file)
-
 def bits_to_bytes(bits):
     # Given a list of bits, break them into bitstrings of length 8
     bytes = []
