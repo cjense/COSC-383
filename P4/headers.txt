@@ -1,0 +1,350 @@
+***********************************************************************
+Image is  AlbumCover.png
+Header size is  16
+Big Endian Height: 54, width: 11
+Header size is  32
+Big Endian Height: 2870, width: 32877
+Header size is  64
+Big Endian Height: 2154629942, width: 1478888538
+Header size is  16
+Little Endian Height: 54, width: 11
+Header size is  32
+Little Endian Height: 13835, width: 28032
+Header size is  64
+Little Endian Height: 906718592, width: 1510745688
+***********************************************************************
+Image is  AlmostBoop.png
+Header size is  16
+Big Endian Height: 4, width: 209
+Header size is  32
+Big Endian Height: 53508, width: 48943
+Header size is  64
+Big Endian Height: 3207581956, width: 2259980947
+Header size is  16
+Little Endian Height: 4, width: 209
+Header size is  32
+Little Endian Height: 1233, width: 12223
+Header size is  64
+Little Endian Height: 80818111, width: 2475865222
+***********************************************************************
+Image is  altered_py.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 2306
+Header size is  64
+Big Endian Height: 151126016, width: 541131264
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 521
+Header size is  64
+Little Endian Height: 521, width: 147744
+***********************************************************************
+Image is  AmVase.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 15104
+Header size is  64
+Big Endian Height: 989855744, width: 1919251561
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 59
+Header size is  64
+Little Endian Height: 59, width: 1769235826
+***********************************************************************
+Image is  Boyos.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 0
+Header size is  64
+Big Endian Height: 0, width: 0
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 0
+Header size is  64
+Little Endian Height: 0, width: 0
+***********************************************************************
+Image is  BulbyTheBulby.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 19770
+Header size is  64
+Big Endian Height: 1295646720, width: 2250350534
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 14925
+Header size is  64
+Little Endian Height: 14925, width: 3332317574
+***********************************************************************
+Image is  Castle.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 16385
+Header size is  64
+Big Endian Height: 1073807360, width: 4026531840
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 320
+Header size is  64
+Little Endian Height: 320, width: 240
+***********************************************************************
+Image is  Chio1.png
+Header size is  16
+Big Endian Height: 28, width: 143
+Header size is  32
+Big Endian Height: 36636, width: 29978
+Header size is  64
+Big Endian Height: 1964674844, width: 2764201889
+Header size is  16
+Little Endian Height: 28, width: 143
+Header size is  32
+Little Endian Height: 7311, width: 6773
+Header size is  64
+Little Endian Height: 479140469, width: 2707407524
+***********************************************************************
+Image is  Chio2.png
+Header size is  16
+Big Endian Height: 13, width: 223
+Header size is  32
+Big Endian Height: 57101, width: 40000
+Header size is  64
+Big Endian Height: 2621497101, width: 3154001489
+Header size is  16
+Little Endian Height: 13, width: 223
+Header size is  32
+Little Endian Height: 3551, width: 16540
+Header size is  64
+Little Endian Height: 232734876, width: 1363082939
+***********************************************************************
+Image is  Drone_Footage_Frame001.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 0
+Header size is  64
+Big Endian Height: 0, width: 0
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 0
+Header size is  64
+Little Endian Height: 0, width: 0
+***********************************************************************
+Image is  EagleInAmherst.png
+Header size is  16
+Big Endian Height: 146, width: 73
+Header size is  32
+Big Endian Height: 18834, width: 28956
+Header size is  64
+Big Endian Height: 1897679250, width: 963517639
+Header size is  16
+Little Endian Height: 146, width: 73
+Header size is  32
+Little Endian Height: 37449, width: 7281
+Header size is  64
+Little Endian Height: 2454264945, width: 3340529209
+***********************************************************************
+Image is  FlossyBoi.png
+Header size is  16
+Big Endian Height: 148, width: 202
+Header size is  32
+Big Endian Height: 51860, width: 38465
+Header size is  64
+Big Endian Height: 2520894100, width: 1211244688
+Header size is  16
+Little Endian Height: 148, width: 202
+Header size is  32
+Little Endian Height: 38090, width: 16790
+Header size is  64
+Little Endian Height: 2496283030, width: 2418029128
+***********************************************************************
+Image is  FlyAway.png
+Header size is  16
+Big Endian Height: 4, width: 20
+Header size is  32
+Big Endian Height: 5124, width: 19472
+Header size is  64
+Big Endian Height: 1276122116, width: 2449529654
+Header size is  16
+Little Endian Height: 4, width: 20
+Header size is  32
+Little Endian Height: 1044, width: 4172
+Header size is  64
+Little Endian Height: 68423756, width: 920322194
+***********************************************************************
+Image is  hide_image.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 15360
+Header size is  64
+Big Endian Height: 1006632960, width: 1342177280
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 60
+Header size is  64
+Little Endian Height: 60, width: 80
+***********************************************************************
+Image is  hide_text.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 14594
+Header size is  64
+Big Endian Height: 956432384, width: 544698184
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 569
+Header size is  64
+Little Endian Height: 569, width: 1215264544
+***********************************************************************
+Image is  IsThatAMoth.png
+Header size is  16
+Big Endian Height: 59, width: 253
+Header size is  32
+Big Endian Height: 64827, width: 30057
+Header size is  64
+Big Endian Height: 1969880379, width: 3454344325
+Header size is  16
+Little Endian Height: 59, width: 253
+Header size is  32
+Little Endian Height: 15357, width: 26997
+Header size is  64
+Little Endian Height: 1006463349, width: 2233263565
+***********************************************************************
+Image is  KAndR.png
+Header size is  16
+Big Endian Height: 253, width: 86
+Header size is  32
+Big Endian Height: 22269, width: 47180
+Header size is  64
+Big Endian Height: 3092010749, width: 1303013196
+Header size is  16
+Little Endian Height: 253, width: 86
+Header size is  32
+Little Endian Height: 64854, width: 19640
+Header size is  64
+Little Endian Height: 4250291384, width: 1281862221
+***********************************************************************
+Image is  Knight.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 8200
+Header size is  64
+Big Endian Height: 537395200, width: 879614260
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 2080
+Header size is  64
+Little Endian Height: 2080, width: 886664500
+***********************************************************************
+Image is  Knight_Small.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 28991
+Header size is  64
+Big Endian Height: 1899954176, width: 3060877494
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 16241
+Header size is  64
+Little Endian Height: 16241, width: 3058201014
+***********************************************************************
+Image is  Lurking.png
+Header size is  16
+Big Endian Height: 184, width: 36
+Header size is  32
+Big Endian Height: 9400, width: 22630
+Header size is  64
+Big Endian Height: 1483089080, width: 3781797895
+Header size is  16
+Little Endian Height: 184, width: 36
+Header size is  32
+Little Endian Height: 47140, width: 26200
+Header size is  64
+Little Endian Height: 3089393240, width: 128477665
+***********************************************************************
+Image is  Lurking_Color_Balanced.png
+Header size is  16
+Big Endian Height: 0, width: 0
+Header size is  32
+Big Endian Height: 0, width: 61440
+Header size is  64
+Big Endian Height: 4026531840, width: 1073807360
+Header size is  16
+Little Endian Height: 0, width: 0
+Header size is  32
+Little Endian Height: 0, width: 240
+Header size is  64
+Little Endian Height: 240, width: 320
+***********************************************************************
+Image is  OhHai.png
+Header size is  16
+Big Endian Height: 88, width: 36
+Header size is  32
+Big Endian Height: 9304, width: 6790
+Header size is  64
+Big Endian Height: 444998744, width: 629249577
+Header size is  16
+Little Endian Height: 88, width: 36
+Header size is  32
+Little Endian Height: 22564, width: 34330
+Header size is  64
+Little Endian Height: 1478788634, width: 697729317
+***********************************************************************
+Image is  Standoff.png
+Header size is  16
+Big Endian Height: 93, width: 75
+Header size is  32
+Big Endian Height: 19293, width: 7299
+Header size is  64
+Big Endian Height: 478366557, width: 3272679241
+Header size is  16
+Little Endian Height: 93, width: 75
+Header size is  32
+Little Endian Height: 23883, width: 33564
+Header size is  64
+Little Endian Height: 1565229852, width: 1226772931
+***********************************************************************
+Image is  StetchyYawnyBois.png
+Header size is  16
+Big Endian Height: 5, width: 18
+Header size is  32
+Big Endian Height: 4613, width: 17753
+Header size is  64
+Big Endian Height: 1163465221, width: 2672315284
+Header size is  16
+Little Endian Height: 5, width: 18
+Header size is  32
+Little Endian Height: 1298, width: 22853
+Header size is  64
+Little Endian Height: 85088581, width: 2487961759
+***********************************************************************
+Image is  Waaaarm.png
+Header size is  16
+Big Endian Height: 6, width: 2
+Header size is  32
+Big Endian Height: 518, width: 16966
+Header size is  64
+Big Endian Height: 1111884294, width: 1178747458
+Header size is  16
+Little Endian Height: 6, width: 2
+Header size is  32
+Little Endian Height: 1538, width: 17986
+Header size is  64
+Little Endian Height: 100812354, width: 1111638598

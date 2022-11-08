@@ -4,6 +4,62 @@ import numpy as np
 from PIL import Image as im
 import itertools as it
 
+def read_px(px, func):
+    """Extract bits from a pixel given a function
+    @param func: function that takes an array (pixel channels) and returns
+        an array of bits"""
+    return ''.join(func(px))
+
+
+def read_BGR(px):
+    arr = []
+    for i in range(3):
+        arr.append(str(px[2-i] & 1))
+    if len(px) > 3:
+        arr.append(str(px[3] & 1))
+    return arr
+
+
+def read_if_alpha(px):
+    arr = []
+    if px[3] != 0:
+        arr.append([str(x&1) for x in px[:3]])
+    return arr
+
+def get_bits2(img, axis=0, colors='RGB', limit=None, func=lambda px: [str(x&1) for x in px]):
+    """Given an image and a function to select bits from each pixel channel,
+    return a bitstring of the selected bits.
+    @param img: imageio image object
+    @param axis: 0 for LRTB, 1 for TBLR
+    @param limit: maximum number of bits to return
+    @param func: function for extracting bits from a pixel
+    @return: string of extracted bits in the image, in left-to-right,
+        top-to-bottom, RGB order
+    """
+    height, width, _ = img.shape
+    bits = ""
+
+    if axis == 0:  # LRTB
+        for r in range(height):
+            for c in range(width):
+                if colors == 'RGB':
+                    bits += read_px(img[r, c], func=func)
+                elif colors == 'BGR':
+                    bits += read_px(img[r, c], func=read_BGR)
+                if limit and len(bits) >= limit:
+                    return bits[:limit]
+    elif axis == 1:  # TBLR
+        for c in range(width):
+            for r in range(height):
+                if colors == 'RGB':
+                    bits += read_px(img[r, c], func=func)
+                elif colors == 'BGR':
+                    bits += read_px(img[r, c], func=read_BGR)
+                if limit and len(bits) >= limit:
+                    return bits[:limit]
+    
+    return bits
+
 def get_bits_iter(img):
     height, width, _ = img.shape
     for h in range(height):
@@ -27,6 +83,22 @@ def getBitsFromSingleChannel(img, channel):
     string = ""
     for r in range(height):
         for c in range(width):
+            string += str(img[r, c, channel]&1)
+
+    return string
+
+def getBitsFromSingleChannelReversed(img, channel):
+    """Given an image and a channel, return a bitstring.
+
+    @param img: imageio image object
+    @param channel: channel to extract bits from
+    @return: string of extracted bits in the image, in left-to-right,
+        top-to-bottom order
+    """
+    height, width, _ = img.shape
+    string = ""
+    for c in range(width):
+        for r in range(height):
             string += str(img[r, c, channel]&1)
 
     return string
@@ -64,9 +136,9 @@ def big_endian(bitstring):
     bytes = []
     for i in range(len(bitstring), 0, -8):
         bytes.append(bitstring[i-8:i])  # Drops leading bits that don't fit into a multiple of 8
-    print(bytes)
+    # print(bytes)
     converted = ''.join(bytes)
-    print(converted)
+    # print(converted)
     return int(converted, 2)
 
 

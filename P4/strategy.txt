@@ -2,6 +2,9 @@ Ran detect_steg on every image, saved magnified images to /magnified directory.
 
 Tried to run decode_img on every image in /PNGs, worked on Castle and Lurking_Color_Balanced.
 
+Ran text_from_channels on every image in /PNGs and /decodedimages, worked on Drone_Footage_Frame001 and OhHai and FlossyBoi
+among others, which were less useful.
+
 #################### AlbumCover ####################
 Height: 906718592, width: 1510745688
 

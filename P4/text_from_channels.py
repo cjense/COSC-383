@@ -8,12 +8,12 @@ for filename in os.listdir('PNGs'):
     img = iio.imread(filepath)
     print("***********************************************************************")
     print("Image is ", filename)
-    for i in range(0, 3):
-        bits = utils.getBitsFromSingleChannel(img, i)
-        print("Text from channel ", i)
-        print("")
-        print(dt.bits_to_str(bits, 500))
-        print("")
+    # for i in range(0, 3):
+    bits = utils.getBitsFromSingleChannel(img, 4)
+    print("Text from channel ", 4)
+    print("")
+    print(dt.bits_to_str(bits, 10000))
+    print("")
     try:
         bits = utils.getBitsFromSingleChannel(img, 4)
     except:
