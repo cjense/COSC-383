@@ -27,12 +27,39 @@ Histogram indicates that there's something hidden
 Magnified image indicates that there's something hidden, possibly top to bottom instead of L to R
 
 #################### Drone_Footage_Frame001 ####################
+Parsed through each channel separately, reading text from just the R, G, or B channel.
+
+Oops! All Crunch Berries
+Cap'n Crunch (regular)
+Milk (again)
+Altoids
+Dog food
+Neapolitan ice cream (tub)
+Protein Powder
+Diet coke
+Mentos
+Orange juice (all pulp)
+Milk
+Eggs
+2 cups almond extract
+Potatoes
+Green beans
+Horseradish
 
 #################### EagleInAmherst ####################
 
 #################### FlossyBoi ####################
 
+Found in Channel 1:
+At times you can kill two birds with one stone.
+If you do so, you will be short a stone and will have killed two birds.
+If you don't, you will have a stone, and two birds will keep their lives.
+
 #################### FlyAway ####################
+
+Found in channel 0:
+Why say in four lines...
+*big text* what you can say in one?
 
 #################### IsThatAMoth ####################
 
@@ -56,9 +83,18 @@ No text in either decoded or decoded_magnified images.
 
 #################### OhHai ####################
 
+Found in channel 2:
+My prediction, distilled from various computer models:
+There will be two global health crises in the near future.
+The first will revolve around tide pods and will be spread through the Internet.
+The second will be worse.
+
 #################### Standoff ####################
 
 #################### StretchyYawnyBois ####################
 
 #################### Waaarm ####################
+
+Found in channel 0:
+0000001100000011000000110000001100000011000000110001001100010011000000110000001100000011000000110000001100000011000100110001001100000011000000110000001100010011000000110000001100010011000100110000001100000011000000110000001100000011000000110001001100010011000000110000001100000011000000110000001100000011000100110001001100000011000000110000001100000011000000110000001100010011000100110000001100000011000000110001001100000011000000110001001100010011000000110000001100000011000100110000001100000011000
 

@@ -24,10 +24,10 @@ def getBitsFromSingleChannel(img, channel):
         top-to-bottom order
     """
     height, width, _ = img.shape
-    string = []
+    string = ""
     for r in range(height):
         for c in range(width):
-            string.append(img[r, c, channel]&1)
+            string += str(img[r, c, channel]&1)
 
     return string
 
