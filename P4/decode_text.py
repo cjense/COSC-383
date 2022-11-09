@@ -19,13 +19,43 @@ def bits_to_str(bits, num_chars):
     string = ''.join(chr(c) for c in ascii)
     return string
 
+def reverse(s):
+    reversed = ''
+    for i in range(len(s)):
+        reversed = s[i]+reversed
+    return reversed
 
-def decode_txt(filename):
+def decode_txt_new(filename, num_chars):
+    """Read encoded text from a given image file"""
+    # Read in the image
+    img = iio.imread(filename)
+    bits = utils.get_bits(img)  # lambda gets LSB of x
+    # Extract bitstring
+    bytes = utils.bits_to_bytes(bits)
+    reversed = []
+    for b in bytes:
+        reversed.append(reverse(b))
+    bytes = reversed
+
+    bits = ''
+    for byte in bytes:
+        bits.join(byte)
+
+    bits = utils.get_bits(img)  # lambda gets LSB of x
+    # Read first 32 bits as header and parse as number of characters
+    # chars_bitstring = bits[0:32]
+    # num_chars = int(chars_bitstring, 2)
+    # Get number of chars from bitstring after header
+    string = bits_to_str(bits[32:], num_chars)
+    print(string)
+
+
+def decode_txt(filename, num_chars):
     """Read encoded text from a given image file"""
     # Read in the image
     img = iio.imread(filename)
     # Extract bitstring
-    bits = utils.get_bits(img, lambda x: x&1)  # lambda gets LSB of x
+    bits = utils.get_bits2(img, lambda x: x&1)  # lambda gets LSB of x
     # Read first 32 bits as header and parse as number of characters
     chars_bitstring = bits[0:32]
     num_chars = int(chars_bitstring, 2)

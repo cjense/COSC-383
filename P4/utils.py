@@ -26,19 +26,66 @@ def read_if_alpha(px):
         arr.append([str(x&1) for x in px[:3]])
     return arr
 
+def getBitsFromSingleChannel(img, channel):
+    """Given an image and a channel, return a bitstring.
+
+    @param img: imageio image object
+    @param channel: channel to extract bits from
+    @return: string of extracted bits in the image, in left-to-right,
+        top-to-bottom order
+    """
+    height, width, _ = img.shape
+    string = ""
+    for r in range(height):
+        for c in range(width):
+            string += str(img[r, c, channel]&1)
+
+    return string
+
+def read_px(px, func):
+    """Extract bits from a pixel given a function
+    @param func: function that takes an array (pixel channels) and returns
+        an array of bits"""
+    return ''.join(func(px))
+
+def read_BGR(px):
+    arr = []
+    for i in range(3):
+        arr.append(str(px[2-i] & 1))
+    if len(px) > 3:
+        arr.append(str(px[3] & 1))
+    return arr
+
+def only_red(px):
+    return [str(px[0]&1)]
+
+def only_green(px):
+    return [str(px[1]&1)]
+
+def only_blue(px):
+    return [str(px[2]&1)]
+
+def get_2LSB(px):
+    """Return second-least-significant-bit of each channel"""
+    return [str((x>>1)&1) for x in px]
+
+def get_21LSB(px):
+    return [format(x&3, '02b') for x in px]
+
+
 def get_bits2(img, axis=0, colors='RGB', limit=None, func=lambda px: [str(x&1) for x in px]):
     """Given an image and a function to select bits from each pixel channel,
     return a bitstring of the selected bits.
+
     @param img: imageio image object
     @param axis: 0 for LRTB, 1 for TBLR
     @param limit: maximum number of bits to return
     @param func: function for extracting bits from a pixel
-    @return: string of extracted bits in the image, in left-to-right,
-        top-to-bottom, RGB order
+    @return: string of extracted bits in the image, in order according to axis
+        and colors
     """
     height, width, _ = img.shape
     bits = ""
-
     if axis == 0:  # LRTB
         for r in range(height):
             for c in range(width):
@@ -60,16 +107,6 @@ def get_bits2(img, axis=0, colors='RGB', limit=None, func=lambda px: [str(x&1) f
     
     return bits
 
-def get_bits_iter(img):
-    height, width, _ = img.shape
-    for h in range(height):
-        for w in range(width):
-            for c in range(3):
-                it.product(img[h, w, c])
-    # bits = it.product(range(height), range(width), range(3))
-    # bits = 
-
-    return bits
 
 def getBitsFromSingleChannel(img, channel):
     """Given an image and a channel, return a bitstring.
@@ -80,12 +117,28 @@ def getBitsFromSingleChannel(img, channel):
         top-to-bottom order
     """
     height, width, _ = img.shape
-    string = ""
+    bits = ""
     for r in range(height):
         for c in range(width):
-            string += str(img[r, c, channel]&1)
+            bits += str(img[r, c, channel]&1)
 
-    return string
+    return bits
+
+def getBitsFromSingleChannel_better(img, channel):
+    """Given an image and a channel, return a bitstring.
+
+    @param img: imageio image object
+    @param channel: channel to extract bits from
+    @return: string of extracted bits in the image, in left-to-right,
+        top-to-bottom order
+    """
+    height, width, _ = img.shape
+    bits = ""
+    for r in range(height):
+        for c in range(width):
+            bits = read_px((img[r, c, channel]&1))
+
+    return bits
 
 def getBitsFromSingleChannelReversed(img, channel):
     """Given an image and a channel, return a bitstring.
@@ -113,6 +166,10 @@ def get_bits(img, func=lambda x: x&1):
     @return: string of extracted bits in the image, in left-to-right,
         top-to-bottom, RGB order
     """
+    # if height is None:
+    #     height = img.shape[0]
+    # if width is None:
+    #     width = img.shape[1]
     height, width, _ = img.shape
     bits = ""
     for r in range(height):

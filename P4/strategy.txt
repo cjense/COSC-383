@@ -60,7 +60,7 @@ If you don't, you will have a stone, and two birds will keep their lives.
 
 #################### FlyAway ####################
 
-Found in channel 0:
+Found in channel 0 (red):
 Why say in four lines...
 *big text* what you can say in one?
 
@@ -81,6 +81,8 @@ output and got a grainy and oversaturated image of a cat
 (decodedImages/Lurking_Color_Balanced_decoded_magnified.png), different from the original image.
 
 No text in either decoded or decoded_magnified images.
+
+Found cocktail recipe in blue channel of decoded image
 
 #################### Lurking ####################
 
