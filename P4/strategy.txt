@@ -17,6 +17,22 @@ Height: 521, width: 147744
 #################### Boyos ####################
 Height: 59, width: 1769235826
 
+Found 3 images - one in each channel
+
+Boyos0:
+Found by parsing top-to-bottom:
+This is a red herring.
+
+Boyos1:
+Found in channel 0:
+One who sleeps with a naginata is a fool every night but one.
+
+Boyos2:
+From channel 1
+Tzu bits of wisdom:
+If you seek to find your way, read Lao.
+If someone is in your way, read Sun.
+
 #################### BulbyTheBulby ####################
 Height: 0, width: 0
 Has 4 channels
@@ -79,8 +95,6 @@ Ran decode_img on the original image and got a magnified image as the output
 (decodedImages/Lurking_Color_Balanced_decoded.png). Magnified the magnified image 
 output and got a grainy and oversaturated image of a cat 
 (decodedImages/Lurking_Color_Balanced_decoded_magnified.png), different from the original image.
-
-No text in either decoded or decoded_magnified images.
 
 Found cocktail recipe in blue channel of decoded image
 

@@ -172,8 +172,30 @@ def get_bits(img, func=lambda x: x&1):
     #     width = img.shape[1]
     height, width, _ = img.shape
     bits = ""
+        
     for r in range(height):
         for c in range(width):
+            for x in range(3):
+                bits += str(func(img[r, c, x]))
+    return bits
+
+def get_bits_ttb(img, func=lambda x: x&1):
+    """Given an image and a function to select bits from each pixel channel,
+    return a bitstring of the selected bits.
+
+    @param img: imageio image object
+    @param func: function that takes a channel value and returns zero or more
+        bits (default returns LSB)
+    @return: string of extracted bits in the image, in top-to-bottom order
+    """
+    # if height is None:
+    #     height = img.shape[0]
+    # if width is None:
+    #     width = img.shape[1]
+    height, width, _ = img.shape
+    bits = ""
+    for c in range(width):
+        for r in range(height):
             for x in range(3):
                 bits += str(func(img[r, c, x]))
     return bits

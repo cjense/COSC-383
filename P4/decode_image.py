@@ -42,7 +42,7 @@ def decode_img(filename, savename):
     # Load image
     img = iio.imread(filename)
     # Extract least-significant bits as string
-    bits = utils.get_bits2(img, lambda x: x&1)  # lambda gets LSB of x
+    bits = utils.get_bits(img)  # lambda gets LSB of x
     # Parse header
     height_bitstring = bits[0:32]
     width_bitstring = bits[32:64]
